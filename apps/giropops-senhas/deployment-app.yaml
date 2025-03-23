@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: giropops-senhas
-        image: ghcr.io/luisbianconi/giropops-senhas:__TAG__
+        image: ghcr.io/luisbianconi/giropops-senhas:__IMAGE_TAG__
         ports:
         - containerPort: 5000
