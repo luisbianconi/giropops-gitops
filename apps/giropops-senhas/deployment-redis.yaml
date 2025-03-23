@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: redis-giropops-senhas
+  labels:
+    app: redis-database
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis-database
+  template:
+    metadata:
+      labels:
+        app: redis-database
+    spec:
+      containers:
+      - name: redis
+        image: redis:6.2.5
+        ports:
+        - containerPort: 6379
