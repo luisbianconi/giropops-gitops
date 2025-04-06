@@ -3,3 +3,4 @@ resources:
 
 patches:
   - path: patch-replicas.yaml
+  - path: patch-ingress.yaml
