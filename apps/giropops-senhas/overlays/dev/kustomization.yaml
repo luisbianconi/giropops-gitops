@@ -1,0 +1,7 @@
+namePrefix: dev-
+
+resources:
+  - ../../base
+
+patches:
+  - path: patch-replicas.yaml
