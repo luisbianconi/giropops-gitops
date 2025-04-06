@@ -5,6 +5,17 @@ metadata:
 spec:
   rules:
     - host: devlabs.luisbianconi.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: giropops-senhas
+                port:
+                  number: 5000
   tls:
     - hosts:
         - devlabs.luisbianconi.com
+      secretName: giropops-senhas-tls
+
