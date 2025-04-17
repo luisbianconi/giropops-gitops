@@ -3,5 +3,5 @@ kind: Deployment
 metadata:
   name: giropops-senhas
 spec:
-  replicas: 3
+  replicas: 4
 
