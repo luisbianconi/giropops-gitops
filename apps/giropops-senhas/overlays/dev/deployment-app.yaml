@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: giropops-senhas
+  labels:
+    app: giropops-senhas
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: giropops-senhas
+  template:
+    metadata:
+      labels:
+        app: giropops-senhas
+    spec:
+      containers:
+      - name: giropops-senhas
+        image: ghcr.io/luisbianconi/giropops-senhas:463764b0e9aa5eff78ba8de4b023229dd4a80481
+        ports:
+        - containerPort: 5000
