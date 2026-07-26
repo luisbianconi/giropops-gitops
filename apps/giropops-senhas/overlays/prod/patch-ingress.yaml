@@ -3,9 +3,10 @@ kind: Ingress
 metadata:
   name: giropops-senhas
 spec:
+  ingressClassName: tailscale
+
   rules:
-    - host: prodlabs.luisbianconi.com
-      http:
+    - http:
         paths:
           - path: /
             pathType: Prefix
@@ -14,8 +15,7 @@ spec:
                 name: giropops-senhas
                 port:
                   number: 5000
+
   tls:
     - hosts:
-        - prodlabs.luisbianconi.com
-      secretName: giropops-senhas-tls
-
+        - prodlabs
