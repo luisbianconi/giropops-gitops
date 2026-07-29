@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/luisbianconi/giropops-gitops.git
     targetRevision: main
-    path: apps/giropops-senhas
+    path: apps/clusters
   destination:
     server: https://kubernetes.default.svc
     namespace: giropops
